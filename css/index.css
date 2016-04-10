@@ -1,0 +1,10 @@
+.signin-box{
+    width: 250px !important;
+    margin-left: calc( 50% - 125px );
+    margin-top: calc( 30% - 125px );
+    
+}
+
+a,input{
+    margin-top: 20px !important;
+}

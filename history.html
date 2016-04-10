@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="uikit/css/uikit.almost-flat.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <script src="uikit/js/uikit.min.js"></script>
+    <script src="uikit/js/components/sticky.min.js"></script>
+    <script src="justgage-1.2.2/justgage.js"></script>
+    <script src="justgage-1.2.2/raphael-2.1.4.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/index.js"></script>
+
+
+</head>
+<nav class="uk-navbar" data-uk-sticky style="z-index: 100;">
+    <ul class="uk-navbar-nav">
+        <li class=""><a href="">Overwatch</a></li>
+        <li class="uk-active"><a href="">History</a></li>
+    </ul>
+    <div class="uk-navbar-flip">
+        <ul class="uk-navbar-nav">
+            <li><a href="">Setting</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="uk-container uk-container-center">
+    
+    <div>
+        <div class="uk-panel uk-panel-box">
+            <div class="uk-panel-badge uk-badge uk-badge-danger">Danger</div>
+            <h3 class="uk-panel-title">Power Over</h3> At 12:24:03 Power Over to 14 Amp.
+        </div>
+        <div class="uk-panel uk-panel-box">
+            <div class="uk-panel-badge uk-badge uk-badge-warning">Wraning</div>
+            <h3 class="uk-panel-title">Power In Limited</h3> At 12:24:03 Power In Limt
+        </div>
+        <div class="uk-panel uk-panel-box">
+            <div class="uk-panel-badge uk-badge">Information</div>
+            <h3 class="uk-panel-title">Power No Use</h3> At 00:01:03 Power No Use
+        </div>
+    </div>
+    <div>
+        <h3 class="uk-text-center">History (6 Hours ago)</h3>
+        <canvas id="powerChart"></canvas>
+    </div>
+</div>
+
+</html>

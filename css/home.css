@@ -1,0 +1,13 @@
+.uk-panel{
+    margin-bottom: 5px;
+}
+#powerChart{
+    width: 100%;
+    height: 300px;
+}
+.gauge{
+    
+}
+svg {
+    height: 100% !important;
+}
