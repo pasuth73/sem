@@ -4,6 +4,20 @@ var powerBarChart;
 var update;
 
 $(document).ready(function() {
+    $.post("/sumary", { date: "today" }, function(data) {
+        var json = JSON.parse(data);
+        $("#wh-today-sammary").text(json.wh_today_sammary);
+        $("#unit-today-sammary").text(json.unit_today_sammary);
+        $("#amount-today-sammary").text(json.amount_today_sammary);
+    });
+
+    $.post("/sumary", { date: "curent-month" }, function(data) {
+        var json = JSON.parse(data);
+        $("#wh-month-sammary").text(json.wh_month_sammary);
+        $("#unit-month-sammary").text(json.unit_month_sammary);
+        $("#amount-month-sammary").text(json.amount_month_sammary);
+    });
+
     $.post("/gague", function(data) {
         var json = JSON.parse(data);
         powerGague(json.val, json.mx, json.limit);
@@ -30,7 +44,7 @@ $(document).ready(function() {
                 var json = JSON.parse(data);
                 pg.refresh(json.label, json.val, json.limit);
                 update = true;
-            }else if(now.getMinutes() !== 0 && update){
+            } else if (now.getMinutes() !== 0 && update) {
                 update = false;
             }
 
