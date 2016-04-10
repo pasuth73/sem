@@ -8,8 +8,6 @@
     <script src="js/jquery-2.2.2.min.js"></script>
     <script src="uikit/js/uikit.min.js"></script>
     <script src="uikit/js/components/sticky.min.js"></script>
-    <script src="justgage-1.2.2/justgage.js"></script>
-    <script src="justgage-1.2.2/raphael-2.1.4.min.js"></script>
     <script src="js/Chart.min.js"></script>
     <script src="js/history.js"></script>
 
@@ -30,41 +28,51 @@
 <div class="uk-container uk-container-center">
 
     <h2 class="uk-text-center" style="margin-top:20px;"> Event Viewer </h2>
+    <div class="uk-form uk-text-center">
+        <select>
+            <option value="volvo">Last 10</option>
+            <option value="saab">Last 50</option>
+            <option value="mercedes">Last 100</option>
+            <option value="audi">Last 500</option>
+            <option value="audi">Last 1000</option>
+        </select>
+    </div>
     <h3 class="uk-text-danger"> DANGER <h3>
-    <div id="danger-con" class="event-con">
-        <div class="uk-panel uk-panel-box">
-            <div class="uk-panel-badge uk-badge uk-badge-warning">WRANING</div>
-            <h3 class="uk-panel-title" data-uk-toggle="{target:'#my-id', animation:'uk-animation-slide-top, uk-animation-slide-top'}">
-                Power In Limited <i class="uk-icon-sort-desc"></i>
-            </h3>
-            <div>12:24:03</div>
-            <div id="my-id" class="uk-hidden"><div>Power In Limt</div></div>
-        </div>
-    </div>
+    <div id="danger-con" class="event-con"></div>
     <h3 class="uk-text-warning"> WARNING <h3>
-    <div id="warning-con" class="event-con">
-        <div class="uk-panel uk-panel-box">
-            <div class="uk-panel-badge uk-badge uk-badge-warning">WRANING</div>
-            <h3 class="uk-panel-title" data-uk-toggle="{target:'#my-id', animation:'uk-animation-slide-top, uk-animation-slide-top'}">
-                Power In Limited <i class="uk-icon-sort-desc"></i>
-            </h3>
-            <div id="my-id" class="uk-hidden">At 12:24:03 Power In Limt</div>
-        </div>
-    </div>
+    <div id="warning-con" class="event-con"></div>
     <h3 class="uk-text-primary"> INFORMATION <h3>
-    <div id="information-con" class="event-con">
-        <div class="uk-panel uk-panel-box">
-            <div class="uk-panel-badge uk-badge uk-badge-warning">WRANING</div>
-            <h3 class="uk-panel-title" data-uk-toggle="{target:'#my-id', animation:'uk-animation-slide-top, uk-animation-slide-top'}">
-                Power In Limited <i class="uk-icon-sort-desc"></i>
-            </h3>
-            <div id="my-id" class="uk-hidden">At 12:24:03 Power In Limt</div>
-        </div>
+    <div id="information-con" class="event-con"></div>
+    
+    <div class="uk-form">
+        <h2 class="uk-text-center">History Graph</h2>
+    <ul class="uk-tab" data-uk-tab>
+        <li class="uk-active"><a href="" class="graph_btt" id="live">Live Graph</a></li>
+        <li><a href="" class="graph_btt" id="h12">12 Hours</a></li>
+        <li><a href="" class="graph_btt" id="d1">1 Day</a></li>
+        <li><a href="" class="graph_btt" id="w1">1 Week</a></li>
+        <li><a href="" class="graph_btt" id="m1">1 Month</a></li>
+        <li><a href="" class="graph_btt" id="y1">1 Year</a></li>
+    </ul>
+    <canvas id="powerChart"></canvas>
+    
+    <div class="uk-form">
+        <h2 class="uk-text-center">Quantity of Power Use</h2>
+    <ul class="uk-tab" data-uk-tab>
+        <li class="uk-active"><a href="" class="graph_btt" id="w1">1 Week</a></li>
+        <li><a href="" class="graph_btt" id="m1">1 Month</a></li>
+        <li><a href="" class="graph_btt" id="y1">1 Year</a></li>
+    </ul>
+    <div class="uk-grid">
+      <div class="uk-width-1-2">
+          <canvas id="useTimePolarArea"></canvas>
+          </div>  
+                <div class="uk-width-1-2">
+          <canvas id="useRangeTimePolarArea"></canvas>
+          </div>  
     </div>
-    <div>
-        <h3 class="uk-text-center">History (6 Hours ago)</h3>
-        <canvas id="powerChart"></canvas>
-    </div>
+    
+</div>
 </div>
 
 </html>

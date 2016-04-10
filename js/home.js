@@ -1,9 +1,11 @@
 var pg;
-var ctx = $("#powerChart").get(0).getContext("2d");
+var ctx;
 var powerBarChart;
 var update;
 
 $(document).ready(function() {
+    ctx = $("#powerChart").get(0).getContext("2d");
+    
     $.post("/sumary", { date: "today" }, function(data) {
         var json = JSON.parse(data);
         $("#wh-today-sammary").text(json.wh_today_sammary);
