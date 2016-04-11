@@ -13,31 +13,33 @@
 
 
 </head>
-<nav class="uk-navbar" data-uk-sticky style="z-index: 100;">
-    <ul class="uk-navbar-nav">
-        <li class=""><a href="home.html">Overwatch</a></li>
-        <li class="uk-active"><a href="history.html">History</a></li>
-    </ul>
-    <div class="uk-navbar-flip">
+
+<body>
+    <nav class="uk-navbar" data-uk-sticky style="z-index: 100;">
         <ul class="uk-navbar-nav">
-            <li><a href="">Setting</a></li>
+            <li class=""><a href="home.html">Overwatch</a></li>
+            <li class="uk-active"><a href="history.html">History</a></li>
         </ul>
-    </div>
-</nav>
+        <div class="uk-navbar-flip">
+            <ul class="uk-navbar-nav">
+                <li><a href="">Setting</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<div class="uk-container uk-container-center">
+    <div class="uk-container uk-container-center">
 
-    <h2 class="uk-text-center" style="margin-top:20px;"> Event Viewer </h2>
-    <div class="uk-form uk-text-center">
-        <select>
-            <option value="volvo">Last 10</option>
-            <option value="saab">Last 50</option>
-            <option value="mercedes">Last 100</option>
-            <option value="audi">Last 500</option>
-            <option value="audi">Last 1000</option>
-        </select>
-    </div>
-    <h3 class="uk-text-danger"> DANGER <h3>
+        <h2 class="uk-text-center" style="margin-top:20px;"> Event Viewer </h2>
+        <div class="uk-form uk-text-center">
+            <select>
+                <option value="volvo">Last 10</option>
+                <option value="saab">Last 50</option>
+                <option value="mercedes">Last 100</option>
+                <option value="audi">Last 500</option>
+                <option value="audi">Last 1000</option>
+            </select>
+        </div>
+        <h3 class="uk-text-danger"> DANGER <h3>
     <div id="danger-con" class="event-con"></div>
     <h3 class="uk-text-warning"> WARNING <h3>
     <div id="warning-con" class="event-con"></div>
@@ -74,5 +76,5 @@
     
 </div>
 </div>
-
+</body>
 </html>

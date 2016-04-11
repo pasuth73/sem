@@ -15,52 +15,63 @@
 
 
 </head>
-<nav class="uk-navbar" data-uk-sticky style="z-index: 100;">
-    <ul class="uk-navbar-nav">
-        <li class="uk-active"><a href="home.html">Overwatch</a></li>
-        <li class=""><a href="history.html">History</a></li>
-    </ul>
-    <div class="uk-navbar-flip">
-        <ul class="uk-navbar-nav">
-            <li><a href="">Setting</a></li>
-        </ul>
-    </div>
-</nav>
 
-<div class="uk-container uk-container-center">
-    <table class="uk-container-center">
-        <tr>
-            <td><h2 class="uk-text-right">TODAY</h2></td>
-            <td rowspan="3"><div id="gauge" style="width:250px; height:200px"></div></td>
-            <td><h2>MONTH</h2></td>
-        </tr>
-        <tr>
-            <td><h2 class="uk-text-right" ><span id="wh-today-sammary">0</span> Wh : <span id="unit-today-sammary">0</span> Unit</h2></td>
-            <td><h2>Unit <span id="unit-month-sammary">0</span> : Wh <span id="wh-month-sammary">0</span></h2></td>
-        </tr>
-        <tr>
-            <td><h1 class="uk-text-right" id ><span id="amount-today-sammary">0</span> ฿</h1></td>      
-            <td><h1>฿ <span id="amount-month-sammary">0</span></h1></td>
-        </tr>
-    </table>
-    <div id="event-con">
-        <div class="uk-panel uk-panel-box">
-            <div class="uk-panel-badge uk-badge uk-badge-danger">Danger</div>
-            <h3 class="uk-panel-title">Power Over</h3> At 12:24:03 Power Over to 14 Amp.
+<body>
+    <nav class="uk-navbar" data-uk-sticky style="z-index: 100;">
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="home.html">Overwatch</a></li>
+            <li class=""><a href="history.html">History</a></li>
+        </ul>
+        <div class="uk-navbar-flip">
+            <ul class="uk-navbar-nav">
+                <li><a href="">Setting</a></li>
+            </ul>
         </div>
-        <div class="uk-panel uk-panel-box">
-            <div class="uk-panel-badge uk-badge uk-badge-warning">Wraning</div>
-            <h3 class="uk-panel-title">Power In Limited</h3> At 12:24:03 Power In Limt
+    </nav>
+
+    <div class="uk-container uk-container-center">
+        <table class="uk-container-center">
+            <tr>
+                <td>
+                    <h2 class="uk-text-right">TODAY</h2></td>
+                <td rowspan="3">
+                    <div id="gauge" style="width:250px; height:200px"></div>
+                </td>
+                <td>
+                    <h2>MONTH</h2></td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="uk-text-right"><span id="wh-today-sammary">0</span> Wh : <span id="unit-today-sammary">0</span> Unit</h2></td>
+                <td>
+                    <h2>Unit <span id="unit-month-sammary">0</span> : Wh <span id="wh-month-sammary">0</span></h2></td>
+            </tr>
+            <tr>
+                <td>
+                    <h1 class="uk-text-right" id><span id="amount-today-sammary">0</span> ฿</h1></td>
+                <td>
+                    <h1>฿ <span id="amount-month-sammary">0</span></h1></td>
+            </tr>
+        </table>
+        <div id="event-con">
+            <div class="uk-panel uk-panel-box">
+                <div class="uk-panel-badge uk-badge uk-badge-danger">Danger</div>
+                <h3 class="uk-panel-title">Power Over</h3> At 12:24:03 Power Over to 14 Amp.
+            </div>
+            <div class="uk-panel uk-panel-box">
+                <div class="uk-panel-badge uk-badge uk-badge-warning">Wraning</div>
+                <h3 class="uk-panel-title">Power In Limited</h3> At 12:24:03 Power In Limt
+            </div>
+            <div class="uk-panel uk-panel-box">
+                <div class="uk-panel-badge uk-badge">Information</div>
+                <h3 class="uk-panel-title">Power No Use</h3> At 00:01:03 Power No Use
+            </div>
         </div>
-        <div class="uk-panel uk-panel-box">
-            <div class="uk-panel-badge uk-badge">Information</div>
-            <h3 class="uk-panel-title">Power No Use</h3> At 00:01:03 Power No Use
+        <div>
+            <h3 class="uk-text-center">History (12 Hours ago)</h3>
+            <canvas id="powerChart"></canvas>
         </div>
     </div>
-    <div>
-        <h3 class="uk-text-center">History (12 Hours ago)</h3>
-        <canvas id="powerChart"></canvas>
-    </div>
-</div>
+</body>
 
 </html>
